@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;0,900;1,900&family=Architects+Daughter&family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#e2e3de",
+          "surface-dim": "#dadad6",
+          "surface-tint": "#576500",
+          "tertiary-fixed": "#dae2ff",
+          "primary": "#576500",
+          "primary-fixed-dim": "#b8d300",
+          "secondary": "#5f5e5e",
+          "on-tertiary-container": "#2c5fc3",
+          "tertiary-container": "#d9e1ff",
+          "outline-variant": "#c6c9ac",
+          "on-secondary-fixed-variant": "#474746",
+          "inverse-on-surface": "#f1f1ec",
+          "surface-container": "#eeeee9",
+          "outline": "#767960",
+          "on-error": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#1b1c1c",
+          "on-primary-fixed-variant": "#414c00",
+          "on-primary-fixed": "#191e00",
+          "inverse-surface": "#2f312e",
+          "error-container": "#ffdad6",
+          "tertiary": "#2559bd",
+          "secondary-fixed": "#e5e2e1",
+          "secondary-fixed-dim": "#c8c6c5",
+          "background": "#fafaf5",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#b8d300",
+          "on-surface": "#1a1c19",
+          "on-secondary": "#ffffff",
+          "error": "#ba1a1a",
+          "primary-container": "#d2f000",
+          "on-tertiary": "#ffffff",
+          "surface-container-low": "#f4f4ef",
+          "on-tertiary-fixed-variant": "#00419e",
+          "on-tertiary-fixed": "#001946",
+          "secondary-container": "#e2dfde",
+          "primary-fixed": "#d2f001",
+          "tertiary-fixed-dim": "#b1c5ff",
+          "surface-container-highest": "#e2e3de",
+          "surface-container-high": "#e8e8e4",
+          "surface-bright": "#fafaf5",
+          "on-background": "#1a1c19",
+          "surface": "#fafaf5",
+          "on-secondary-container": "#636262",
+          "on-surface-variant": "#454933",
+          "on-error-container": "#93000a",
+          "on-primary-container": "#5c6b00"
+        },
+        "fontFamily": {
+          "headline": ["Epilogue"],
+          "body": ["Architects Daughter"],
+          "technical": ["Be Vietnam Pro"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .graph-paper {
+    background-color: #fafaf5;
+    background-image:
+      linear-gradient(#e5e7eb 1px, transparent 1px),
+      linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .wiggly-border {
+    border: 2px solid #1a1c19;
+    border-radius: 2px 8px 3px 10px / 10px 3px 8px 2px;
+  }
+  .marker-shadow {
+    position: relative;
+  }
+  .marker-shadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: -6px;
+    right: -6px;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#1a1c19 1px, transparent 1px);
+    background-size: 4px 4px;
+    opacity: 0.15;
+  }
+  .washi-tape {
+    background-color: #d2f000;
+    opacity: 0.8;
+    height: 24px;
+    width: 80px;
+    transform: rotate(-3deg);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  .ink-underline {
+    background-image: linear-gradient(transparent 90%, #1a1c19 90%);
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+<style>
+  body {
+    min-height: max(884px, 100dvh);
+  }
+</style>
+</head>
+<body class="graph-paper text-on-surface font-technical selection:bg-primary-container">
+
+<!-- Top Navigation Bar -->
+<header class="bg-[#fafaf5] dark:bg-[#1a1c19] text-[#1a1c19] dark:text-[#fafaf5] docked full-width top-0 border-b-[3px] border-black dark:border-white border-dashed z-50">
+  <nav class="flex justify-between items-center w-full px-6 py-4 max-w-[1440px] mx-auto bg-[url('https://www.transparenttextures.com/patterns/graph-paper.png')]">
+    <div class="flex items-center gap-4">
+      <span class="material-symbols-outlined text-3xl">architecture</span>
+      <h1 class="text-3xl font-black italic tracking-tighter font-['Epilogue'] uppercase">FAILURE BOX</h1>
+    </div>
+    <div class="hidden md:flex gap-8 items-center font-['Epilogue'] tracking-tighter uppercase font-black">
+      <a class="text-[#576500] dark:text-[#d2f000] underline decoration-wavy decoration-2 hover:bg-[#d2f000] hover:text-black transition-all duration-75" href="#">BLUEPRINTS</a>
+      <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:bg-[#d2f000] hover:text-black transition-all duration-75" href="#">FIELD NOTES</a>
+      <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:bg-[#d2f000] hover:text-black transition-all duration-75" href="#">RESOURCES</a>
+    </div>
+    <button class="bg-primary px-6 py-2 text-on-primary font-black uppercase tracking-widest scale-95 active:rotate-1 hover:bg-primary-container hover:text-on-primary-container transition-all wiggly-border">
+      GET THE BOX
+    </button>
+  </nav>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-12">
+
+  <!-- Header Section -->
+  <div class="mb-16 relative">
+    <div class="absolute -top-10 -left-10 opacity-20 pointer-events-none">
+      <span class="material-symbols-outlined text-9xl">pending</span>
+    </div>
+    <div class="flex flex-col lg:flex-row items-start gap-10">
+      <div class="flex-1">
+        <h2 class="font-headline font-black text-6xl uppercase tracking-tighter mb-4 leading-[0.9]">
+          CHOOSE YOUR <span class="bg-primary-container px-2">STRUGGLE</span>.
+        </h2>
+        <p class="font-body text-xl max-w-lg leading-relaxed text-on-surface-variant">
+          Look, failure isn't a bug—it's the core feature. Pick your primary hardware foundation, then bolt on the specialized chaos you want to master. No instructions, just blueprints.
+        </p>
+      </div>
+      <!-- Video Placeholder -->
+      <div class="relative lg:w-80 w-full shrink-0 rotate-[1deg]">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 washi-tape flex items-center justify-center text-[10px] font-black tracking-widest">FIELD_LOG.MP4</div>
+        <div class="aspect-video bg-on-surface wiggly-border marker-shadow flex flex-col items-center justify-center gap-3 relative overflow-hidden cursor-pointer group">
+          <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(#fafaf5 1px, transparent 1px); background-size: 8px 8px;"></div>
+          <span class="material-symbols-outlined text-7xl relative z-10 text-surface/50 group-hover:text-primary-container transition-colors duration-150" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+          <span class="font-body text-surface/40 text-xs relative z-10 tracking-widest uppercase">Video Placeholder</span>
+        </div>
+        <div class="absolute -bottom-5 right-0 font-body text-[9px] text-on-surface-variant italic rotate-[2deg]">Fig 0.0: Coming Soon</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Bento Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+
+    <!-- Foundation Kit: col-span-7 -->
+    <div class="md:col-span-7 bg-surface-container-lowest wiggly-border marker-shadow p-8 relative rotate-[0.5deg]">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 washi-tape flex items-center justify-center text-[10px] font-black tracking-widest">STAPLE UNIT</div>
+      <div class="flex flex-col lg:flex-row gap-8">
+        <div class="lg:w-1/2">
+          <div class="relative bg-surface-variant p-2 rotate-[-1deg] wiggly-border">
+            <img class="w-full h-80 object-cover grayscale-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX6UscSz5VGbfX05E3ayuVXzSAmmWrWqiEbSArM9q8gqflC5k6KNqkXe4N067eHCUWMu3k4QFEPx7TrLmWgQqKAD-JWzUYIOvxWPPr0xjIGZq3f7WipJ5anzW6VYMVvC9LVI4z5fUqOOI-jq7nbcSde8HbBxUNgPVahj9F_rRrM-wVyC3RX8CbVw3HkAAIUvRMH-egKrPs0xcWu6g_XHb6RasfE59tFDaSeqwJSpUG-AMNHYEom7GPGsCFhaCPK756hSXaCqHrKwg-" alt="DIY electronics workbench with an Arduino microcontroller, colorful jumper wires, breadboard, and scattered electronic sensors">
+            <div class="absolute bottom-4 right-4 bg-white/90 p-2 font-body text-sm rotate-1">
+              Fig 1.1: The Foundation
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 flex flex-col justify-between">
+          <div>
+            <h3 class="font-headline font-black text-3xl uppercase mb-4">Foundation Kit</h3>
+            <p class="font-body text-lg mb-6 leading-snug">
+              The essential messy desk starter. Includes the microcontroller, a forest of jumpers, enough sensors to make things "blink" and "beep", and the servo that'll inevitably knock over your coffee.
+            </p>
+            <ul class="space-y-2 font-technical text-sm text-on-surface-variant mb-8">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">check_circle</span> 1x Core Microcontroller</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">check_circle</span> 67x Multi-color Jumpers (The Spaghetti)</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">check_circle</span> Ultrasonic &amp; IR Sensor Array</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-lg">check_circle</span> 1x High-Torque Micro Servo</li>
+            </ul>
+          </div>
+          <button class="w-full bg-on-surface text-surface py-4 font-headline font-black text-lg uppercase hover:bg-primary transition-colors wiggly-border active:scale-95">
+            ACQUIRE CORE UNIT
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add-ons: col-span-5, stacked vertically, expand on hover -->
+    <div class="md:col-span-5 flex flex-col gap-3">
+      <h3 class="font-headline font-black text-xl uppercase tracking-tighter flex items-center gap-4 mb-2">
+        Specialized Add-Ons <span class="h-[2px] flex-grow bg-on-surface/20"></span>
+      </h3>
+
+      <!-- Add-on 1: The Line Follower -->
+      <div class="group relative bg-surface-container-lowest wiggly-border marker-shadow overflow-hidden">
+        <div class="flex gap-4 items-start p-4">
+          <div class="w-20 h-20 shrink-0 relative bg-surface-container p-1 wiggly-border transition-transform duration-200 group-hover:rotate-[-3deg]">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcM6AtsBGz9zQL8bedYkJf9EPlLdmqc3nSUpTM9Uvx1DrK6rHgqlFKQbf2WNtH-syKBHDIjUjYmuwSrjLGqjvfCq4_mMHvpUKxgaFAFYpUcdRwY9j9lCOvn92sGvmdHXCe_Ck7Cj-XTSs34dECBz6E83dcPV-3aDvOgQHqBT6PaRumTmI_JXxoLEPw6ij6wjMaKDXvd2mpYqSkJXRmZyM51bHydK8cYn5nQ8Ty3tfP6Wj-xViYVeOOPrm370I_C81iAHU0rY3eBTQo" alt="Small two-wheeled robot chassis with sensors pointing toward a line on the floor">
+            <div class="washi-tape absolute -bottom-2 -left-4 !bg-tertiary !opacity-90 text-white !w-14 !h-4 text-[8px] flex items-center justify-center font-black !rotate-[-2deg]">LOGIC</div>
+          </div>
+          <div class="flex-grow pt-1">
+            <h4 class="font-headline font-extrabold text-base uppercase mb-1">The Line Follower</h4>
+            <div class="text-[10px] font-technical font-bold text-tertiary tracking-widest bg-tertiary-container inline-block px-2">ROBOTICS + CODING</div>
+          </div>
+        </div>
+        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
+          <div class="overflow-hidden">
+            <div class="px-4 pb-5">
+              <p class="font-body text-sm mb-4">
+                Teach your creation to obey the void. Includes specialized IR reflectance sensors and a lightweight chassis. Best for those who want to struggle with PID loops.
+              </p>
+              <button class="font-technical text-xs font-black uppercase text-on-surface underline decoration-2 decoration-primary hover:text-primary transition-colors">
+                + ADD TO BLUEPRINT
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add-on 2: The Robotic Arm -->
+      <div class="group relative bg-surface-container-lowest wiggly-border marker-shadow overflow-hidden">
+        <div class="flex gap-4 items-start p-4">
+          <div class="w-20 h-20 shrink-0 relative bg-surface-container p-1 wiggly-border transition-transform duration-200 group-hover:rotate-[3deg]">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2tAqk1j7Vmld636TSHXh8XuWagGKpiDMMRa9GLKLRvt28n7Mcm4LiEL-fiXMKfVRIgxFIeY1AiuCoeS2Nk560cZPDopuwwCxJyddi1SpnudRJZO9O3AqiSyps-bECS0mk1zbxX5PZ3N1R1JZw3twR74H-EV49PFzJBzJKcZxeVBg9KeyHMHnGjBRkFG7sNhLqGrQVPs6Wg0cToOQPwMw2-1pwcCAi0-XHfAeazyiq3uKBoTM0urM08dToMxoMDbEgu9FLMOWFo3rX" alt="3D printed mechanical robotic arm with visible servo motors on a workshop table">
+            <div class="washi-tape absolute -top-2 -right-4 !bg-error !opacity-90 text-white !w-14 !h-4 text-[8px] flex items-center justify-center font-black !rotate-[2deg]">PHYSICS</div>
+          </div>
+          <div class="flex-grow pt-1">
+            <h4 class="font-headline font-extrabold text-base uppercase mb-1">The Robotic Arm</h4>
+            <div class="text-[10px] font-technical font-bold text-error tracking-widest bg-error-container inline-block px-2">MECHANICAL + KINEMATICS</div>
+          </div>
+        </div>
+        <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-in-out">
+          <div class="overflow-hidden">
+            <div class="px-4 pb-5">
+              <p class="font-body text-sm mb-4">
+                4-axis of potential structural failure. Comes with high-torque servos and a laser-cut acrylic frame. Good luck with the inverse kinematics—you'll need it.
+              </p>
+              <button class="font-technical text-xs font-black uppercase text-on-surface underline decoration-2 decoration-primary hover:text-primary transition-colors">
+                + ADD TO BLUEPRINT
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Join the Lab Newsletter -->
+  <section class="max-w-4xl mx-auto py-16">
+    <div class="bg-on-surface text-surface p-12 wiggly-border relative overflow-hidden marker-shadow">
+      <div class="relative z-10 text-center">
+        <h3 class="font-headline font-black text-4xl uppercase mb-4 tracking-tighter italic">Join the Lab</h3>
+        <p class="font-body text-xl mb-8 opacity-80">Receive weekly error logs and discarded blueprints in your inbox.</p>
+        <div class="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+          <input class="bg-transparent border-b-2 border-surface font-body text-lg px-4 py-2 focus:ring-0 focus:border-primary-container grow bg-white/5 placeholder:text-surface/60" placeholder="YOUR_EMAIL_HERE" type="email"/>
+          <button class="bg-primary-container text-on-surface font-headline font-black px-8 py-3 wiggly-border hover:scale-105 transition-none active:scale-95">
+            TRANSMIT
+          </button>
+        </div>
+      </div>
+      <div class="absolute -bottom-10 -left-10 w-40 h-40 border-[6px] border-surface opacity-10 rounded-full"></div>
+      <div class="absolute -bottom-8 -left-8 w-32 h-32 border-[4px] border-surface opacity-5 rounded-full"></div>
+    </div>
+  </section>
+
+  <!-- Footer Annotation -->
+  <div class="mt-8 border-t-4 border-double border-on-surface pt-8 flex flex-col md:flex-row justify-between items-center gap-8 font-['Architects_Daughter'] text-sm italic">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-full border-2 border-on-surface flex items-center justify-center font-bold text-2xl rotate-[-5deg]">?</div>
+      <div>
+        <p class="font-headline font-bold uppercase not-italic text-xs tracking-widest mb-1">Still confused?</p>
+        <p>Just flip a coin. Either way, you're going to learn more from the smoke than the light.</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <p>© 2024 FAILURE BOX LABS. RECORDED IN PERMANENT INK.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-10 py-12 gap-6 bg-[#fafaf5] dark:bg-[#1a1c19] text-[#1a1c19] dark:text-[#fafaf5] border-t-[4px] border-[#1a1c19] dark:border-[#fafaf5] border-double bg-[url('https://www.transparenttextures.com/patterns/graph-paper.png')] mt-20">
+  <div class="flex flex-col gap-2">
+    <span class="font-['Epilogue'] font-bold text-lg uppercase">FAILURE BOX LABS</span>
+    <span class="font-['Architects_Daughter'] text-sm italic opacity-80">© 2024 FAILURE BOX LABS. RECORDED IN PERMANENT INK.</span>
+  </div>
+  <div class="flex gap-8 font-['Architects_Daughter'] text-sm italic">
+    <a class="text-[#1a1c19] dark:text-[#fafaf5] opacity-80 hover:line-through hover:text-[#ba1a1a] cursor-nw-resize" href="#">BLUEPRINTS</a>
+    <a class="text-[#1a1c19] dark:text-[#fafaf5] opacity-80 hover:line-through hover:text-[#ba1a1a] cursor-nw-resize" href="#">FIELD NOTES</a>
+    <a class="text-[#1a1c19] dark:text-[#fafaf5] opacity-80 hover:line-through hover:text-[#ba1a1a] cursor-nw-resize" href="#">RESOURCES</a>
+    <a class="text-[#1a1c19] dark:text-[#fafaf5] opacity-80 hover:line-through hover:text-[#ba1a1a] cursor-nw-resize" href="#">CONTACT</a>
+  </div>
+</footer>
+
+</body></html>
